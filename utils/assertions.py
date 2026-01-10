@@ -1,4 +1,3 @@
-import allure
 def assert_true(condition, message):
     assert condition, message
 

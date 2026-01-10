@@ -132,10 +132,6 @@ class SignupPage(BasePage):
     def select_preferred_institution(self):
         self.click_element(self.PREFERRED_INSTITUTION)
 
-    # def upload_file(self, file_path):
-    #     upload_element = self.find_element(self.UPLOADFILE)
-    #     upload_element.send_keys(file_path)
-
     def click_submit_button(self):
         self.click_element(self.SUBMIT_BUTTON)
 

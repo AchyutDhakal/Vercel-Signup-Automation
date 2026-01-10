@@ -2,8 +2,8 @@ VALID_DATA= [
     {
         "first_name": "Achyut",
         "last_name": "Dhakal",
-        "email": "automationtest067+automations129@gmail.com",
-        "phone_number": "9854785412",
+        "email": "automationtest067+automations132@gmail.com",
+        "phone_number": "9836987541",
         "password": "Testtest7*",
         "confirm_password": "Testtest7*",
         "agency_name": "Achyut Agency",
