@@ -1,6 +1,9 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+import os
+import time
+import allure
 
 class BasePage:
     def __init__(self, driver):
@@ -17,13 +20,23 @@ class BasePage:
         return self.wait.until(EC.visibility_of_element_located(locator))
     
     def click_element(self, locator):
-        element = self.find_clickable_element(locator)
-        element.click()
+        try:
+            element = self.find_clickable_element(locator)
+            element.click()
+        except Exception as e:
+            element_name = locator.split("/"[-1]).replace("'","").replace('"','')
+            self.take_screenshot(f"Click_failure_{element_name}")
+            raise e
 
     def enter_text(self, locator, text):
-        element = self.find_element(locator)
-        element.clear()
-        element.send_keys(text)
+        try:
+            element = self.find_element(locator)
+            element.clear()
+            element.send_keys(text)
+        except Exception as e:
+            element_name = locator.split("/"[-1]).replace("'","").replace('"','')
+            self.take_screenshot(f"Send_keys_failure_{element_name}")
+            raise e
 
     def is_element_present(self, locator):
         try:
@@ -42,3 +55,20 @@ class BasePage:
     def get_element_text(self, locator):
         element = self.find_element(locator)
         return element.text
+
+    def take_screenshot(self, name):
+        screenshot_dir = "Screenshots"
+        if not os.path.exists(screenshot_dir):
+            os.makedirs(screenshot_dir)
+
+        timestamp = time.time()
+        file_name = f"{screenshot_dir}/{name}_{timestamp}.png"
+
+        self.driver.save_screenshot(file_name)
+
+        allure.attach.file(
+            file_name,
+            name=name,
+            attachment_type = allure.attachment_type.PNG
+        )
+
