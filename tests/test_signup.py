@@ -25,12 +25,12 @@ class TestSignup:
         with allure.step("Navigate to Login Page"):
             self.signup_page.click_login_link()
             time.sleep(2)
-            assert_true("login" in self.driver.current_url, "Login page did not load correctly")
+            assert_true("login" in self.driver.current_url, "Login page did not load correctly", "login_link",self.signup_page)
 
         with allure.step("Navigate to Signup Page"):
             self.signup_page.click_signup_link()
             time.sleep(2)
-            assert_true("register" in self.driver.current_url, "Signup page did not load correctly")
+            assert_true("register" in self.driver.current_url, "Signup page did not load correctly","signup_link", self.signup_page)
         
         with allure.step("Check privacy policy checkbox and click on continue"):
             self.signup_page.click_privacy_policy_checkbox()
@@ -74,7 +74,7 @@ class TestSignup:
             self.signup_page.click_submit_button()
 
         profile_name = self.signup_page.get_element_text(self.signup_page.PROFILE_NAME) 
-        assert_true(valid_data["first_name"]+" "+valid_data["last_name"] == profile_name, "Signup failed or incorrect profile name displayed")
+        assert_true(valid_data["first_name"]+" "+valid_data["last_name"] == profile_name, "Signup failed or incorrect profile name displayed", "signup", self.signup_page)
 
         time.sleep(5)
 

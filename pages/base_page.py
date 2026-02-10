@@ -30,6 +30,7 @@ class BasePage:
 
     def enter_text(self, locator, text):
         try:
+            locator = list(locator)
             element = self.find_element(locator)
             element.clear()
             element.send_keys(text)
