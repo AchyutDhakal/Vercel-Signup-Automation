@@ -6,7 +6,7 @@ from data.test_data import VALID_DATA
 
 IMAP_SERVER = "imap.gmail.com"
 OTP_REGEX = r"\b\d{6}\b"
-email_account = "automationtest067+automations139@gmail.com"
+email_account = "automationtest067+automations140@gmail.com"
 email_password = "rbatpnjpzwesnfow"
 
 def get_otp_from_email(timeout=90, poll_interval=5):
