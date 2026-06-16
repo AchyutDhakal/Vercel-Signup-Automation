@@ -1,0 +1,17 @@
+Dropdown: '🇦🇫 +93'
+  → Using value: '🇦🇽 +358'
+  → Selected '🇦🇽 +358'
+
+--- Found 6 inputs ---
+Input: name='firstName' placeholder='Enter Your First Name' type='text'
+  → Filled 'Sit labore id voluptate non labore tempor ad occaecat consectetur pariatur. Do est cillum proident enim ut amet non laborum laborum et nostrud Lorem. Sunt esse irure magna dolore cillum adipisicing. Consectetur aliqua laborum quis cupidatat adipisicing cupidatat cupidatat laboris occaecat dolore. Eiusmod non do cupidatat enim et sunt velit mollit fugiat deserunt enim consectetur Lorem incididunt. Dolor aute et excepteur reprehenderit consequat. Sunt magna aute consequat sunt do irure veniam minim magna quis et ut enim. Fugiat proident laborum amet nulla minim sit aliquip veniam velit consequat enim nostrud eu enim. Nulla nostrud laborum excepteur consectetur Lorem laboris magna veniam cupidatat laborum excepteur. Tempor duis deserunt magna labore enim irure nostrud adipisicing incididunt est tempor. Minim incididunt officia mollit est nostrud magna eiusmod nisi laboris proident consequat. Fugiat ex aliqua fugiat in excepteur ullamco dolore esse est minim.'
+Input: name='lastName' placeholder='Enter Your Last Name' type='text'
+  → Filled 'Person'
+Input: name='email' placeholder='Enter Your Email Address' type='email'
+  → Filled 'automationtest067+1781597244_2@gmail.com'
+Input: name='phoneNumber' placeholder='00-00000000' type='text'
+  → Filled '1781597246'
+Input: name='password' placeholder='******************' type='password'
+  → Filled 'Testtest7*'
+Input: name='confirmPassword' placeholder='******************' type='password'
+  → Filled 'Testtest7*'

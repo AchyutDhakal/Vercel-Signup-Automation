@@ -1,0 +1,17 @@
+Dropdown: '🇦🇫 +93'
+  → Using value: '🇦🇽 +358'
+  → Selected '🇦🇽 +358'
+
+--- Found 6 inputs ---
+Input: name='firstName' placeholder='Enter Your First Name' type='text'
+  → Filled 'Random'
+Input: name='lastName' placeholder='Enter Your Last Name' type='text'
+  → Filled 'Person'
+Input: name='email' placeholder='Enter Your Email Address' type='email'
+  → Filled 'automationtest067+1781597244_21@gmail.com'
+Input: name='phoneNumber' placeholder='00-00000000' type='text'
+  → Filled '1781597266'
+Input: name='password' placeholder='******************' type='password'
+  → Filled 'Testtest7*'
+Input: name='confirmPassword' placeholder='******************' type='password'
+  → Filled 'Another7*'
