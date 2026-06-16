@@ -162,7 +162,7 @@ INVALID_PERSONAL_DATA = [
         "firstName": "Random",
         "lastName": "Person", 
         "email": _email(12),
-        "phoneNumber": 154951561545156154102305648978789230054878784510202478451231,
+        "phoneNumber": 1549515615451561541023056489787892300548787845,
         "password":"Testtest7*",
         "confirmPassword":"Testtest7*"
     },

@@ -30,14 +30,23 @@ class TestSignup:
         with allure.step("Fill up personal details"):
             self.signup_page.enter_personal_details(valid_data)
 
+        with allure.step("Assertion of personal details form"):
+            assert_true(self.signup_page.is_element_present(self.signup_page.VERIFY_CODE_BUTTON), f"Valid personal data not allowed for {valid_data}", "valid_personal_details", self.signup_page)
+
         with allure.step("Enter otp"):
             self.signup_page.enter_otp(get_otp_from_email())
         
         with allure.step("Filling out Agency Details"):
             self.signup_page.enter_agency_details(valid_data)
 
+        with allure.step("Assertion of agency details form"):
+            assert_true(self.signup_page.is_element_present(self.signup_page.EXPERIENCE_YEAR), f"Valid agency details not allowed for {valid_data}", "Valid_agency_details", self.signup_page)
+
         with allure.step("Filling up professional experience"):
             self.signup_page.enter_professional_experience(valid_data)
+
+        with allure.step("Assertion of professional experience form"):
+            assert_true(self.signup_page.is_element_present(self.signup_page.BUSINESS_REGISTRATION), f"Valid professional experience data not allowed", "valid_professional_experience", self.signup_page)
 
         with allure.step("Verification and preferences"):
             self.signup_page.verification(valid_data)
