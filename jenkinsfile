@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment{
+        EMAIL_ADDRESS = credentials('email-address')
+        EMAIL_PASSWORD = credentials('email-password')
+    }
+
     stages {
         stage('Install Dependencies') {
             steps {
